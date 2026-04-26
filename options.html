@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookmark HTML Backup – Optionen</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>Bookmark HTML Backup</h1>
+
+    <section class="card">
+      <label for="folder">Backup-Ordner</label>
+      <input id="folder" type="text" spellcheck="false" placeholder="bookmark-backups">
+      <p class="hint">
+        Chrome erlaubt Extensions hier nur einen Pfad <strong>relativ zum Chrome-Downloadordner</strong>.
+        Beispiel: <code>bookmark-backups</code> speichert nach <code>Downloads\bookmark-backups\...</code>.
+      </p>
+      <p class="hint warning">
+        Ein direkter absoluter Pfad wie <code>C:\FESTPLATTEN\...</code> ist in einer normalen Chrome-Extension nicht erlaubt.
+      </p>
+
+      <fieldset>
+        <legend>Standardmodus für einfachen Icon-Klick</legend>
+        <label class="radio">
+          <input type="radio" name="mode" value="compact" id="modeCompact">
+          <span><strong>Kompakt</strong> – ohne Favicons, kleinere Datei</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="mode" value="full" id="modeFull">
+          <span><strong>Voll</strong> – mit Favicons, ähnlicher zum Chrome-Manager-Export</span>
+        </label>
+      </fieldset>
+
+      <div class="buttons">
+        <button id="save">Speichern</button>
+        <button id="backupCompact" class="secondary">Jetzt kompakt sichern</button>
+        <button id="backupFull" class="secondary">Jetzt mit Favicons sichern</button>
+      </div>
+      <p id="status" role="status"></p>
+    </section>
+
+    <section class="card small">
+      <h2>Bedienung</h2>
+      <ul>
+        <li><strong>Ein Klick</strong> auf das Extension-Icon: Backup im gespeicherten Standardmodus.</li>
+        <li><strong>Doppelklick</strong> auf das Extension-Icon: Optionen öffnen.</li>
+        <li><strong>Rechtsklick</strong> auf das Extension-Icon: direkt kompakt oder mit Favicons sichern.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
