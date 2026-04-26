@@ -2,6 +2,10 @@
 
 Chrome-Erweiterung zum Exportieren der Lesezeichen als HTML-Datei.
 
+
+
+![Beschreibung](2026-04-26-chrome-extension-bookmarks-html-backup.png)
+
 ## Funktionen
 
 - Einfacher Klick auf das Extension-Icon: Backup im gespeicherten Standardmodus.
